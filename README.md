@@ -10,7 +10,7 @@
 **อาจารย์ที่ปรึกษาโครงงาน:** ผศ.ดร.วิรัตน์ จารีวงศ์ไพบูลย์
 
 **ผู้จัดทำโครงงาน:** 
-1. นางสาวพิชญาภา สระทองคต  6409650253  phitchayapha.sra@dome.tu.ac.th
+นางสาวพิชญาภา สระทองคต  6409650253  phitchayapha.sra@dome.tu.ac.th
    
 
 #   ♻️ RECYCLABLE WASTE WITH DEEP LEARNING
@@ -27,7 +27,7 @@
 | `model_cnn.ipynb` | โมเดลที่ 1: ใช้ Convolutional Neural Network (CNN) เพื่อทดลองประสิทธิภาพ |
 | `model_yolo.ipynb` | โมเดลที่ 2: ใช้ YOLOv8 เพื่อทดลองประสิทธิภาพ |
 | `final_model_cnn.ipynb` | โมเดลสุดท้ายที่เลือกคือ CNN พร้อมบันทึกเป็นไฟล์ `.h5` |
-| `model.h5` | ไฟล์โมเดล CNN |
+| `model.h5` | ไฟล์โมเดล CNN ที่ผ่านการฝึกฝนมาแล้ว |
 | `gradio_app.ipynb` | โหลดโมเดล `.h5` และเปิด Gradio interface สำหรับการใช้งานจริง |
 
 ## ข้อมูลที่ใช้
@@ -49,13 +49,15 @@
   
 ## ⚙️ วิธีการติดตั้งและตั้งค่า
 ใช้งานบน Google Colab โดยมีขั้นตอน ดังนี้
-1.ดาวน์โหลดไฟล์โมเดลที่ผ่านการฝึกฝนแล้วคือ model_cnn.h5
-2.เปิด Google Colab แล้วเปิดไฟล์ gradio_app.ipynb
-3.อัปโหลดไฟล์ model_cnn.h5 ไปยัง Colab
-4.ใน gradio_app.ipynb จะมีการโหลดโมเดลดังนี้:
+1. ดาวน์โหลดไฟล์โมเดลที่ผ่านการฝึกฝนแล้วคือ model_cnn.h5  
+2. เปิด Google Colab แล้วเปิดไฟล์ gradio_app.ipynb  
+3. อัปโหลดไฟล์ model_cnn.h5 ไปยัง Colab  
+4. ใน gradio_app.ipynb จะมีการโหลดโมเดลดังนี้:
+
 ```python
-   from tensorflow.keras.models import load_model
-   model = load_model('/content/model_cnn.h5')  # ระบุ path ให้ตรงกับที่อัปโหลดไว้
+from tensorflow.keras.models import load_model
+model = load_model('/content/model_cnn.h5')  # ระบุ path ให้ตรงกับที่อัปโหลดไว้
+```
 
 6.รันทุกเซลล์ในไฟล์ gradio_app.ipynb
 
@@ -63,8 +65,8 @@
 
 ### ตัวอย่างอินเทอร์เฟซ Gradio:
 
-> *(สามารถใส่ภาพตัวอย่างได้ที่นี่ หากมี)*  
-> `![Gradio UI](https://drive.google.com/file/d/1fzaqDy76EwNuCPhUnySu_QFEuLKCBPof/view?usp=sharing)`
+![Gradio UI](https://i.postimg.cc/5y4n4Rds/Screenshot-2025-06-12-221510.png)
+
 
 
 ## Author
