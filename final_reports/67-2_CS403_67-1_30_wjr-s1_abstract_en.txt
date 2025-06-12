@@ -1,0 +1,9 @@
+การคัดแยกขยะรีไซเคิลจากภาพด้วยเทคนิคการเรียนรู้เชิงลึก
+RECYCLABLE WASTE SEGREGATION FROM IMAGES USING DEEP LEARNING TECHNIQUES
+
+ABSTRACT
+	Recyclable waste management is a critical issue that impacts both the environment and public well-being. Proper waste separation significantly enhances the efficiency of material reuse. However, this process still depends on human awareness and knowledge, which often leads to classification errors. This project aims to develop an intelligent model to assist with more accurate and convenient waste sorting.
+	Deep learning techniques were applied to create an image classification model that automatically identifies types of waste. Two models—You Only Look Once (YOLO) and Convolutional Neural Network (CNN)—were trained and compared using the same dataset of 1,200 images. YOLO achieved an F1-Score of 87, while CNN achieved an F1-Score of 60. Although YOLO was more accurate, CNN was selected for this project due to its simplicity, lower resource requirements, and ease of deployment.
+	After selecting CNN, the dataset was expanded to 8,031 images. The model was retrained and achieved an accuracy of 78% on the test set. These results demonstrate that the model is effective for supporting waste classification and can be practically applied in real-world scenarios to improve recycling efficiency.
+
+Keywords: Waste recycling, Deep learning, Waste classification
