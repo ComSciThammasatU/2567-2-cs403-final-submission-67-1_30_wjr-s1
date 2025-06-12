@@ -27,7 +27,7 @@
 | `model_cnn.ipynb` | โมเดลที่ 1: ใช้ Convolutional Neural Network (CNN) เพื่อทดลองประสิทธิภาพ |
 | `model_yolo.ipynb` | โมเดลที่ 2: ใช้ YOLOv8 เพื่อทดลองประสิทธิภาพ |
 | `final_model_cnn.ipynb` | โมเดลสุดท้ายที่เลือกคือ CNN พร้อมบันทึกเป็นไฟล์ `.h5` |
-| `model_cnn.h5` | ไฟล์โมเดล CNN ที่ผ่านการฝึกฝนมาแล้ว |
+| `model.h5` | ไฟล์โมเดล CNN ที่ผ่านการฝึกฝนมาแล้ว |
 | `gradio_app.ipynb` | โหลดโมเดล `.h5` และเปิด Gradio interface สำหรับการใช้งานจริง |
 
 ## ข้อมูลที่ใช้
@@ -49,14 +49,14 @@
   
 ## ⚙️ วิธีการติดตั้งและตั้งค่า
 ใช้งานบน Google Colab โดยมีขั้นตอน ดังนี้
-1. ดาวน์โหลดไฟล์โมเดลที่ผ่านการฝึกฝนแล้วคือ model_cnn.h5  
+1. ดาวน์โหลดไฟล์โมเดลที่ผ่านการฝึกฝนแล้วคือ model.h5  
 2. เปิด Google Colab แล้วเปิดไฟล์ gradio_app.ipynb  
-3. อัปโหลดไฟล์ model_cnn.h5 ไปยัง Colab  
+3. อัปโหลดไฟล์ model.h5 ไปยัง Colab  
 4. ใน gradio_app.ipynb จะมีการโหลดโมเดลดังนี้:
 
 ```python
 from tensorflow.keras.models import load_model
-model = load_model('/content/model_cnn.h5')  # ระบุ path ให้ตรงกับที่อัปโหลดไว้
+model = load_model('/content/model.h5')  # ระบุ path ให้ตรงกับที่อัปโหลดไว้
 ```
 
 6.รันทุกเซลล์ในไฟล์ gradio_app.ipynb
