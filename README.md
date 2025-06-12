@@ -27,7 +27,7 @@
 | `model_cnn.ipynb` | โมเดลที่ 1: ใช้ Convolutional Neural Network (CNN) เพื่อทดลองประสิทธิภาพ |
 | `model_yolo.ipynb` | โมเดลที่ 2: ใช้ YOLOv8 เพื่อทดลองประสิทธิภาพ |
 | `final_model_cnn.ipynb` | โมเดลสุดท้ายที่เลือกคือ CNN พร้อมบันทึกเป็นไฟล์ `.h5` |
-| `model.h5` | ไฟล์โมเดล CNN ที่ผ่านการฝึกฝนมาแล้ว |
+| `model_cnn.h5` | ไฟล์โมเดล CNN ที่ผ่านการฝึกฝนมาแล้ว |
 | `gradio_app.ipynb` | โหลดโมเดล `.h5` และเปิด Gradio interface สำหรับการใช้งานจริง |
 
 ## ข้อมูลที่ใช้
