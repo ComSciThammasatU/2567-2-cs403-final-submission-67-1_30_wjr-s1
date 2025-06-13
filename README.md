@@ -27,7 +27,6 @@
 | `model_cnn.ipynb` | โมเดลที่ 1: ใช้ Convolutional Neural Network (CNN) เพื่อทดลองประสิทธิภาพ |
 | `model_yolo.ipynb` | โมเดลที่ 2: ใช้ YOLOv8 เพื่อทดลองประสิทธิภาพ |
 | `final_model_cnn.ipynb` | โมเดลสุดท้ายที่เลือกคือ CNN พร้อมบันทึกเป็นไฟล์ `.h5` |
-| `model.h5` | ไฟล์โมเดล CNN ที่ผ่านการฝึกฝนมาแล้ว |
 | `gradio_app.ipynb` | โหลดโมเดล `.h5` และเปิด Gradio interface สำหรับการใช้งานจริง |
 
 ## ข้อมูลที่ใช้
@@ -49,18 +48,23 @@
   
 ## ⚙️ วิธีการติดตั้งและตั้งค่า
 ใช้งานบน Google Colab โดยมีขั้นตอน ดังนี้
-1. ดาวน์โหลดไฟล์โมเดลที่ผ่านการฝึกฝนแล้วคือ model.h5  
-2. เปิด Google Colab แล้วเปิดไฟล์ gradio_app.ipynb  
-3. อัปโหลดไฟล์ model.h5 ไปยัง Colab  
-4. ใน gradio_app.ipynb จะมีการโหลดโมเดลดังนี้:
+1. เปิด Google Colab แล้วเปิดไฟล์ gradio_app.ipynb
+2. เพิ่มโค้ดนี้ในเซลล์แรกของโน้ตบุ๊ก (ก่อนโหลดโมเดล) เพื่อดาวน์โหลดโมเดลจาก Google Drive
+```python
+import gdown
+import os
 
+if not os.path.exists("model.h5"):
+    url = "https://drive.google.com/uc?id=1X8bJbBj2iTM6yFNLIkYKe9as73b_PNBk"
+    gdown.download(url, "model.h5", quiet=False)
+```
+3. โหลดโมเดล CNN ด้วยคำสั่งนี้
 ```python
 from tensorflow.keras.models import load_model
-model = load_model('/content/model.h5')  # ระบุ path ให้ตรงกับที่อัปโหลดไว้
+model = load_model("model.h5")
 ```
 
-6.รันทุกเซลล์ในไฟล์ gradio_app.ipynb
-
+4.รันทุกเซลล์ในไฟล์ gradio_app.ipynb
 ระบบจะเปิด Gradio Interface สำหรับให้ผู้ใช้งานอัปโหลดภาพขยะ และแสดงผลการจำแนกประเภทขยะได้ทันที
 
 ### ตัวอย่างอินเทอร์เฟซ Gradio:
